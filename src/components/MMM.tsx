@@ -1,9 +1,10 @@
 export default function MMM () {
     return(
-        <div className="flex-1 border border-white-/70">
-            <h1 className="text-bold">
-                Manhwa Manhua Manga (MMM) section
+        <div className="flex flex-col justify-center items-center gap-10">
+            <h1 className="text-bold font-bold text-4xl">
+                MMM section Work in Progress...
             </h1>
+            <img src="./maintenance.png" alt="img" />
         </div>
     )
 }
