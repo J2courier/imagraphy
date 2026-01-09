@@ -45,7 +45,9 @@ function App() {
           {activeTab === 'mmm' && <MMM />}
         </section>
       </main>
-      <GridAside className='w-48'></GridAside>
+      <GridAside className='w-48'>
+
+      </GridAside>
 
 
     </div>

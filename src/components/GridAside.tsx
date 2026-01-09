@@ -40,6 +40,7 @@ const GridAside: React.FC<GridAsideProps> = ({ className = '', ...props }) => {
             <div className="absolute inset-0 z-0 grid-base pointer-events-none" />
             <div className="absolute inset-0 z-10 grid-highlight pointer-events-none" />
             {props.children}
+            
         </aside>
     );
 };

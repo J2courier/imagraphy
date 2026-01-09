@@ -135,7 +135,7 @@ export default function Profile() {
                         </div>
 
                         <TypewriterEffect
-                            text="Hello, I created this website solely for fun and inspired from wiki fandom. This site is for showcasing my hobby, collections, and works. I am currently 3rd year studying at Capiz State University Dayao Satellite College and I am 21 years old born and raised in the Philippines . I dreamed to be a Software Engineer and a DevOps. Futuristic world is not distant from we are now, AI and automation are become part of our daily routine and even become a challenges. Embrace and be Excite for what the world will become 10 years from now."
+                            text="Hello, I created this website solely for fun and inspired from wiki fandom. This site is for showcasing my hobby, collections, and works. I am currently 3rd year studying at Capiz State University Dayao Satellite College and I am 21 years old born and raised in the Philippines. My dream is to be a Software Engineer or any kind as long as a developer. Futuristic world is not distant from we are now, AI and automation are becoming part of our daily routine and even become a challenges. Embrace and be Excite for what the world will become 10 years from now."
                             className="text-lg leading-relaxed tracking-wide text-justify text-slate-300 transition-colors duration-300 z-1 "
                             speed={20}
                         />
@@ -326,10 +326,6 @@ export default function Profile() {
 
                 </div>
             </div>
-
-            <video src="./gif/gif2.mp4" className="w-128 aspect-square rounded-md absolute top-5 left-50 opacity-20 -z-10 " autoPlay muted loop></video>
-            <video src="./gif/gif2.mp4" className="w-128 aspect-square rounded-md absolute top-5 left-176 opacity-20 -z-10" autoPlay muted loop></video>
-            <video src="./gif/gif2.mp4" className="w-128 aspect-square rounded-md absolute top-5 left-300 opacity-20 -z-10" autoPlay muted loop></video>
 
             {/* back to top button */}
             {showBackToTop && (
