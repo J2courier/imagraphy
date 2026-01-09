@@ -1,3 +1,5 @@
+import BackToTop from './BackToTop';
+
 interface Work {
     title: string;
     image: string;
@@ -10,7 +12,7 @@ const WorkCard = ({ work }: { work: Work }) => {
     return (
         <div className="w-full hover:bg-slate-900/20 transition-all duration-100 rounded-md group hover:cursor-pointer">
             <div className="flex flex-col lg:flex-row gap-10 p-4">
-                <img src={work.image} alt={work.title} className='opacity-50 w-full lg:w-128 rounded-md hover:scale-102 transition-all duration-100 object-cover hover:opacity-100' />
+                <img src={work.image} alt={work.title} className='opacity-80 w-full lg:w-128 rounded-md hover:scale-102 transition-all duration-100 object-cover hover:opacity-100' />
                 <div className="flex flex-col gap-5">
                     <h1 className="text-xl font-bold">TITLE: <span className="text-white tracking-wider uppercase">{work.title}</span></h1>
                     <p className="text-gray-400 rounded-md ">DESCRIPTION: <br />
@@ -135,7 +137,7 @@ export default function Myworks() {
     return (
         <div className="flex flex-col p-4 gap-4">
             <div>
-                <h1 className="text-2xl font-bold tracking-wider">My Work Section</h1>
+                <h1 className="text-4xl font-bold tracking-wider">My Work Section</h1>
             </div>
             {/* Art Works List */}
             <div className="flex flex-col gap-4 bg-slate-900/50 p-4 items-start ">
@@ -143,6 +145,7 @@ export default function Myworks() {
                     <WorkCard key={index} work={work} />
                 ))}
             </div>
+            <BackToTop />
         </div>
     );
 }
