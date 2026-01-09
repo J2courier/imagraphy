@@ -143,8 +143,8 @@ export default function Profile() {
                     {/* social */}
                     <div className="flex rounded-md">
                         <ul className="flex gap-4 p-4">
-                            <li><a href="https://facebook.com" target="_blank" className="flex items-center gap-2 p-2 rounded-xl border-2 border-transparent hover:border-yellow-500 hover:bg-yellow-500/50 transition-all duration-300 cursor-pointer"><FacebookIcon /> Facebook</a></li>
-                            <li><a href="https://github.com" target="_blank" className="flex items-center gap-2 p-2 rounded-xl border-2 border-transparent hover:border-yellow-500 hover:bg-yellow-500/50 transition-all duration-300 cursor-pointer"><GithubIcon /> Github</a></li>
+                            <li><a href="https://www.facebook.com/jherson.bartolay" target="_blank" className="flex items-center gap-2 p-2 rounded-xl border-2 border-transparent hover:border-yellow-500 hover:bg-yellow-500/50 transition-all duration-300 cursor-pointer"><FacebookIcon /> Facebook</a></li>
+                            <li><a href="https://github.com/J2courier" target="_blank" className="flex items-center gap-2 p-2 rounded-xl border-2 border-transparent hover:border-yellow-500 hover:bg-yellow-500/50 transition-all duration-300 cursor-pointer"><GithubIcon /> Github</a></li>
                             <li><a href="https://discord.com" target="_blank" className="flex items-center gap-2 p-2 rounded-xl border-2 border-transparent hover:border-yellow-500 hover:bg-yellow-500/50 transition-all duration-300 cursor-pointer"><DiscordIcon /> Discord</a></li>
                             <li>
                                 <div className="flex gap-2 border border-slate-500 rounded-md">
