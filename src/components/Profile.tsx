@@ -119,36 +119,36 @@ export default function Profile() {
     };
 
     return (
-        <div className="p-4 flex flex-col gap-4">
-            <div className="flex bg-gray-900/50  rounded-md p-4 gap-4 ">
+        <div className="p-2 md:p-4 flex flex-col gap-4">
+            <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr] bg-gray-900/50 rounded-md p-4 gap-6 lg:gap-8 ">
                 {/* image section */}
-                <div className="">
-                    <img src="./profile.jpg" alt="img" className="w-64 aspect-square rounded-md hover:scale-110 transition-all duration-300 cursor-pointer" />
+                <div className="flex justify-center lg:block">
+                    <img src="./profile.jpg" alt="img" className="w-full max-w-[300px] md:max-w-[400px] lg:w-64 aspect-square rounded-md hover:scale-110 transition-all duration-300 cursor-pointer shadow-xl shadow-black/30" />
                 </div>
                 {/* my info section */}
-                <div className="flex-1 flex-col align-items-center gap-4 ">
+                <div className="flex flex-col gap-4 text-center lg:text-left">
                     <div className="flex flex-col p-2 gap-4">
 
-                        <div className="flex items-center gap-2">
-                            <h1 className="font-bold text-4xl hover:text-white transition-all duration-300 hover:[text-shadow:0_2px_10px_rgba(6,182,212,0.5)]">Jherson Bartolay</h1>
-                            <img src="./philippines.png" alt="img" className="w-6 aspect-square rounded-md" />
+                        <div className="flex items-center justify-center lg:justify-start gap-2">
+                            <h1 className="font-bold text-3xl md:text-4xl lg:text-5xl hover:text-white transition-all duration-300 hover:[text-shadow:0_2px_10px_rgba(6,182,212,0.5)]">Jherson Bartolay</h1>
+                            <img src="./philippines.png" alt="img" className="w-6 md:w-8 aspect-square rounded-md" />
                         </div>
 
                         <TypewriterEffect
                             text="Hello, I created this website solely for fun and inspired from wiki fandom. This site is for showcasing my hobby, collections, and works. I am currently 3rd year studying at Capiz State University Dayao Satellite College and I am 21 years old born and raised in the Philippines. My dream is to be a Software Engineer or any kind as long as a developer. Futuristic world is not distant from we are now, AI and automation are becoming part of our daily routine and even become a challenges. Embrace and be Excite for what the world will become 10 years from now."
-                            className="text-lg leading-relaxed tracking-wide text-justify text-slate-300 transition-colors duration-300 z-1 "
+                            className="text-base md:text-lg leading-relaxed tracking-wide text-justify text-slate-300 transition-colors duration-300 z-1 break-words"
                             speed={20}
                         />
                     </div>
                     {/* social */}
-                    <div className="flex rounded-md">
-                        <ul className="flex gap-4 p-4">
-                            <li><a href="https://www.facebook.com/jherson.bartolay" target="_blank" className="flex items-center gap-2 p-2 rounded-xl border-2 border-transparent hover:border-yellow-500 hover:bg-yellow-500/50 transition-all duration-300 cursor-pointer"><FacebookIcon /> Facebook</a></li>
-                            <li><a href="https://github.com/J2courier" target="_blank" className="flex items-center gap-2 p-2 rounded-xl border-2 border-transparent hover:border-yellow-500 hover:bg-yellow-500/50 transition-all duration-300 cursor-pointer"><GithubIcon /> Github</a></li>
-                            <li><a href="https://discord.com" target="_blank" className="flex items-center gap-2 p-2 rounded-xl border-2 border-transparent hover:border-yellow-500 hover:bg-yellow-500/50 transition-all duration-300 cursor-pointer"><DiscordIcon /> Discord</a></li>
-                            <li>
-                                <div className="flex gap-2 border border-slate-500 rounded-md">
-                                    <input type="text" placeholder="Leave a note" className="p-2  outline-none cursor-pointer" /> <button className="p-2 rounded-md border-2 border-transparent hover:border-yellow-500 hover:bg-yellow-500/50 transition-all duration-300 cursor-pointer">Send</button>
+                    <div className="flex rounded-md overflow-x-auto justify-center lg:justify-start">
+                        <ul className="flex flex-wrap justify-center lg:justify-start gap-4 p-4">
+                            <li><a href="https://www.facebook.com/jherson.bartolay" target="_blank" className="flex items-center gap-2 p-2 rounded-xl border-2 border-transparent hover:border-yellow-500 hover:bg-yellow-500/50 transition-all duration-300 cursor-pointer text-sm md:text-base"><FacebookIcon /> <span className="hidden sm:inline">Facebook</span></a></li>
+                            <li><a href="https://github.com/J2courier" target="_blank" className="flex items-center gap-2 p-2 rounded-xl border-2 border-transparent hover:border-yellow-500 hover:bg-yellow-500/50 transition-all duration-300 cursor-pointer text-sm md:text-base"><GithubIcon /> <span className="hidden sm:inline">Github</span></a></li>
+                            <li><a href="https://discord.com" target="_blank" className="flex items-center gap-2 p-2 rounded-xl border-2 border-transparent hover:border-yellow-500 hover:bg-yellow-500/50 transition-all duration-300 cursor-pointer text-sm md:text-base"><DiscordIcon /> <span className="hidden sm:inline">Discord</span></a></li>
+                            <li className="w-full sm:w-auto">
+                                <div className="flex gap-2 border border-slate-500 rounded-md overflow-hidden bg-black/20">
+                                    <input type="text" placeholder="Leave a note" className="p-2 w-full outline-none cursor-pointer bg-transparent min-w-0" /> <button className="p-2 rounded-md border-2 border-transparent hover:border-yellow-500 hover:bg-yellow-500/50 transition-all duration-300 cursor-pointer whitespace-nowrap">Send</button>
                                 </div>
                             </li>
                         </ul>
@@ -165,7 +165,7 @@ export default function Profile() {
                     </div>
                 </div>
                 {/* timeline section */}
-                <div className="rounded-md p-2 flex gap-4">
+                <div className="rounded-md p-2 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 overflow-hidden">
                     {timelineData.map((item) => {
 
                         return (
@@ -247,8 +247,8 @@ export default function Profile() {
                 <div className='border-b border-slate-800 p-2'>
                     <h1 className='font-bold text-3xl'>My Hobbies <span> {'>>>'} </span></h1>
                 </div>
-                <div className='p-4 flex gap-10 '>
-                    <div className='flex flex-col p-4 gap-2 '>
+                <div className='p-2 md:p-4 grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-6 md:gap-10 '>
+                    <div className='flex flex-row lg:flex-col p-4 gap-2 overflow-x-auto whitespace-nowrap lg:whitespace-normal pb-4 lg:pb-0'>
                         <div
                             onClick={() => setSelectedHobby("ARTS")}
                             className={`cursor-pointer p-2 rounded-md transition-all duration-300 hover:bg-cyan-400/20 hover:border-cyan-400 border-2 ${selectedHobby === "ARTS" ? "border-cyan-400 bg-cyan-400/20" : "border-transparent"}`}
@@ -295,28 +295,28 @@ export default function Profile() {
 
                         </div>
                     </div>
-                    <div className='flex-1 gap-10'>
+                    <div className='grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10'>
                         {/* gif display container */}
-                        <div className='flex flex-col p-2 min-w-96 min-h-96 flex items-center justify-center bg-black/20'>
-                            <span className='text-sm text-slate-400 mb-2'>
+                        <div className='flex flex-col p-2 min-h-[300px] md:min-h-[400px] flex items-center justify-center bg-black/20 rounded-md'>
+                            <span className='text-xs sm:text-sm text-slate-400 mb-2'>
                                 {selectedHobby ? `${selectedHobby.charAt(0) + selectedHobby.slice(1).toLowerCase()} gif source: pinterest` : ''}
                             </span>
                             {selectedHobby && HOBBY_IMAGES[selectedHobby] ? (
                                 <img
                                     src={HOBBY_IMAGES[selectedHobby]}
                                     alt={selectedHobby}
-                                    className='w-128 object-contain rounded-md'
+                                    className='w-full max-w-[400px] lg:max-w-full object-contain rounded-md shadow-lg shadow-cyan-400/10'
                                 />
                             ) : (
                                 <p className='text-slate-500 italic'>Select a hobby to view its image</p>
                             )}
                         </div>
                         {/* description display container */}
-                        <div className='flex flex-col p-4 gap-4 min-w-96'>
-                            <h1 className='text-xl font-semibold'>Description:</h1>
-                            <div className='bg-black/40 p-4 rounded-sm text-slate-300 leading-relaxed tracking-wider'>
+                        <div className='flex flex-col p-4 gap-4'>
+                            <h1 className='text-xl md:text-2xl font-semibold border-b border-slate-800 pb-2'>Description:</h1>
+                            <div className='bg-black/40 p-4 rounded-md text-slate-300 md:text-lg leading-relaxed tracking-wider'>
                                 {selectedHobby ? (
-                                    <p className='text-justify'>{HOBBY_DESCRIPTIONS[selectedHobby]}</p>
+                                    <p className='text-justify text-sm md:text-base break-words'>{HOBBY_DESCRIPTIONS[selectedHobby]}</p>
                                 ) : (
                                     <p className='text-slate-500 italic'>Click on a hobby to see its description</p>
                                 )}

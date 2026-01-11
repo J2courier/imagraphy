@@ -10,28 +10,31 @@ interface Work {
 
 const WorkCard = ({ work }: { work: Work }) => {
     return (
-        <div className="w-full hover:bg-slate-900/20 transition-all duration-100 rounded-md group hover:cursor-pointer">
-            <div className="flex flex-col lg:flex-row gap-10 p-4">
-                <img src={work.image} alt={work.title} className='opacity-80 w-full lg:w-128 rounded-md hover:scale-102 transition-all duration-100 object-cover hover:opacity-100' />
-                <div className="flex flex-col gap-5">
-                    <h1 className="text-xl font-bold">TITLE: <span className="text-white tracking-wider uppercase">{work.title}</span></h1>
-                    <p className="text-gray-400 rounded-md ">DESCRIPTION: <br />
-                        <span className="text-white/40 tracking-widest text-md transition-colors duration-100 group-hover:text-white/90">
+        <div className="w-full hover:bg-slate-900/20 transition-all duration-300 rounded-md group hover:cursor-pointer p-2 md:p-6 md:gap-10 lg:p-4">
+            <div className="grid grid-cols-1 lg:grid-cols-[auto_1fr] gap-6 lg:gap-10">
+                <div className="flex justify-center lg:block">
+                    <img src={work.image} alt={work.title} className='opacity-80 w-full max-w-[500px] lg:w-96 xl:w-128 rounded-md hover:scale-102 transition-all duration-300 object-cover hover:opacity-100 shadow-lg shadow-black/20' />
+                </div>
+                <div className="flex flex-col gap-4 text-center lg:text-left">
+                    <h1 className="text-xl md:text-2xl lg:text-3xl font-bold">TITLE: <span className="text-white tracking-wider uppercase">{work.title}</span></h1>
+                    <div className="text-gray-400 rounded-md">
+                        <span className="block text-sm font-semibold mb-1 opacity-60">DESCRIPTION:</span>
+                        <p className="text-white/40 tracking-widest text-sm md:text-base transition-colors duration-300 group-hover:text-white/90 text-justify break-words leading-relaxed">
                             {work.description}
-                        </span>
-                    </p>
+                        </p>
+                    </div>
                     {/* category section */}
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap justify-center lg:justify-start gap-2 mt-2">
                         {work.categories.map((category, index) => (
-                            <div key={index} className="bg-indigo-800/60 p-2 rounded-md cursor-pointer hover:bg-indigo-900">
-                                <h1>{category}</h1>
+                            <div key={index} className="bg-indigo-800/60 px-3 py-1 rounded-md cursor-pointer hover:bg-indigo-900 transition-colors">
+                                <h1 className="text-xs sm:text-sm font-medium">{category}</h1>
                             </div>
                         ))}
                     </div>
                     {/* rating section */}
-                    <div className="flex items-center gap-2">
-                        <h1>My Rating: </h1>
-                        <span className="text-white tracking-wider">{work.rating}</span>
+                    <div className="flex items-center justify-center md:justify-start lg:justify-start gap-2 mt-auto pt-4">
+                        <h1 className="text-sm sm:text-base font-semibold">My Rating: </h1>
+                        <span className="text-white tracking-wider text-sm sm:text-base">{work.rating}</span>
                     </div>
                 </div>
             </div>
@@ -135,12 +138,12 @@ export default function Myworks() {
     ];
 
     return (
-        <div className="flex flex-col p-4 gap-4">
-            <div>
-                <h1 className="text-4xl font-bold tracking-wider">My Work Section</h1>
+        <div className="flex flex-col p-2 md:p-4 gap-4">
+            <div className="mb-4">
+                <h1 className="text-3xl md:text-4xl font-bold tracking-wider">My Work Section</h1>
             </div>
             {/* Art Works List */}
-            <div className="flex flex-col gap-4 bg-slate-900/50 p-4 items-start ">
+            <div className="grid grid-cols-1 gap-6 md:gap-4 bg-slate-900/50 p-2 md:p-4 rounded-md">
                 {works.map((work, index) => (
                     <WorkCard key={index} work={work} />
                 ))}
